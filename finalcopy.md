@@ -273,8 +273,7 @@ pdf(paste(title, ".pdf", sep=""))
 hist(dat$depth, xlim=c(0,500), breaks=500) 
 dev.off() 
 ``` 
-
-
+![hist_example](ProjectFigures/CMO_R_his.png)<!-- -->
 
 This showed that all samples have a proportion of regions with >200x depth. Because this is much deeper than the genome was sequenced to, this points to PCR duplicates or reads mapped to repetitive regions of the genome in the data set.
 
@@ -535,7 +534,7 @@ plot1 <- ggplot(dat2, aes(x = number, y= Pi, colour = chr))+
         axis.text.x= element_text(size=15), axis.text.y= element_text(size=15)) +
   scale_colour_manual(values=c("#56B4E9", "#E69F00", 'grey30', 'grey46', 'wheat3', 'lemonchiffon4'))
   
-pdf("",width=1060,height=412,units="px")
+png("",width=1060,height=412,units="px")
 plot1
 dev.off()
   ```
@@ -772,7 +771,19 @@ png("UPvDNgatk_2L.png",width=1060,height=412,units="px")
 plt2
 dev.off()
 ``` 
-Only representative images are shown here, but because I want to discuss these results in detail below, all images are provided within my Biol722 Github directory.
+Wild population example: comparing allele frequences in left and right selected groups
+![wild ds LvR](FstFigs/ds_gatk.png)<!-- -->
+
+Chr2L with ds in blue 
+![wild ds LvR 2L](FstFigs/ds_gatk_2L.png)<!-- -->
+
+Artifical selection example:comparing allele frequences in up and down selected groups
+![wild ds LvR](FstFigs/dsUPvDNgatk.png)<!-- -->
+
+Chr2L with ds in blue
+![wild ds LvR 2L](FstFigs/dsUPvDNgatk_2L.png)<!-- -->
+
+The rest of the images can been found in the FstFigs directory on this GitHub repo
 
 As expected, Fst is much higher across the genome in the artificial selection than the wild population analysis. Visually, there is little to no change between the graphs using data that had or had not undergone indel realignment. However, as discussed below this step did have an effect on the number of variants detected in the genome. 
 
