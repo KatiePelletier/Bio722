@@ -273,6 +273,9 @@ pdf(paste(title, ".pdf", sep=""))
 hist(dat$depth, xlim=c(0,500), breaks=500) 
 dev.off() 
 ``` 
+
+![](ProjectFigures/CMO_75R_smallbins2_cov.pdf)
+
 This showed that all samples have a proportion of regions with >200x depth. Because this is much deeper than the genome was sequenced to, this points to PCR duplicates or reads mapped to repetitive regions of the genome in the data set.
 
 I can also look at the average read depth and look for the presence of duplicates in the data set using the following scripts. These will produce a histogram of read depth. We predict our average read depth to be about 100x so regions with higher coverage indicate the presence of PCR duplicates or highly repetitive regions where reads can not be reliably mapped.
