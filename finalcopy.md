@@ -274,7 +274,7 @@ hist(dat$depth, xlim=c(0,500), breaks=500)
 dev.off() 
 ``` 
 
-![](ProjectFigures/CMO_75R_smallbins2_cov.pdf)
+
 
 This showed that all samples have a proportion of regions with >200x depth. Because this is much deeper than the genome was sequenced to, this points to PCR duplicates or reads mapped to repetitive regions of the genome in the data set.
 
@@ -479,7 +479,7 @@ perl ${pi} \
 	--min-covered-fraction 0.5
 done 
 ``` 
-This can then be visualized with this script In my samples, pi values matched what I expected to see: a reduction of diveristy on the X chromosome, 4th chromosome and around centromeres and telomeres. 
+This can then be visualized with this script 
 
 ``` 
 library(tidyverse)
@@ -539,6 +539,10 @@ pdf("",width=1060,height=412,units="px")
 plot1
 dev.off()
   ```
+![pi_example](ProjectFigures/CMO_75L_pi.png)<!-- -->
+
+In my samples, pi values matched what I expected to see: a reduction of diveristy on the X chromosome, 4th chromosome and around centromeres and telomeres. 
+This is consistent across all samples. 
 
 ### *PoPoolation2 analysis*
 PoPoolation2 is a population genetics tool to compare between populations in pool-seq data (Kofler *et al.* 2011b). For this project, I chose to calculate the Fst values because this is the easiest parameter to interrupt and compare for both the wild population and artificial selection experiments.
