@@ -537,7 +537,7 @@ plot1
 dev.off()
   ```
 
-### _PoPoolation2 analysis_
+### *PoPoolation2 analysis*
 PoPoolation2 is a population genetics tool to compare between populations in pool-seq data (Kofler *et al.* 2011b). For this project, I chose to calculate the Fst values because this is the easiest parameter to interrupt and compare for both the wild population and artificial selection experiments.
 
 ### Calculation of Fst in samples 
